@@ -1,0 +1,343 @@
+/* General Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Metrics Box */
+.metrics-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.metric-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.metric-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.metric-box.active {
+  background: #007bff;
+  color: white;
+}
+
+.metric-box.active strong {
+  color: white;
+}
+
+/* Search & Filter */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.filter-dropdown {
+  padding: 10px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.filter-dropdown:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Customer Section */
+.customer-section {
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.customer-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.customer-header {
+  background: #f1f1f1;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out;
+}
+
+.customer-header:hover {
+  background: #e0e0e0;
+}
+
+/* Appointment Table */
+.appointment-table-container {
+  overflow-x: auto;
+}
+
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointment-table th,
+.appointment-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.appointment-table th {
+  background: #f1f1f1;
+  font-weight: bold;
+}
+
+/* Buttons */
+.schedule-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.schedule-button:hover {
+  background-color: #0056b3;
+}
+
+.reschedule-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.bulk-schedule-button {
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.bulk-schedule-button:hover {
+  background-color: #0056b3;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.status-awaiting {
+  color: #f9d361;
+  border: 1px solid #ffeeba;
+}
+
+.status-not-set {
+  color: #2186df;
+  border: 1px solid #e9ecef;
+}
+
+.status-confirmed {
+  color: #2ddd56;
+  border: 1px solid #c3e6cb;
+}
+
+.status-requested {
+  color: #d11629;
+  border: 1px solid #f5c6cb;
+}
+.status-badge:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.status-badge {
+  transition: all 0.2s ease-in-out;
+}
+
+
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f4f8;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.filter-tab:hover {
+  background: #e2e8f0;
+}
+
+.filter-tab.active {
+  background: #007bff;
+  color: white;
+}
+/* Modal Enhancements */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Close Button Fix */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.2s ease-in-out;
+}
+
+.close-button:hover {
+  background: #cc0000;
+}
+
+/* Fix for Notes and Input Fields */
+.modal-body input,
+.modal-body textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.modal-body textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* Buttons inside Modal */
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.action-button {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease-in-out;
+}
+
+.action-button:hover {
+  background: #f0f4f8;
+}
